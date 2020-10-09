@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  MapMemoryManagementExampleProject
+//  MapMemoryManagement
 //
 //  Created by Zachary Simone on 10/10/20.
 //

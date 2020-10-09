@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		922BAE2325311EC100C04D9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922BAE2225311EC100C04D9A /* AppDelegate.swift */; };
 		922BAE2525311EC100C04D9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922BAE2425311EC100C04D9A /* SceneDelegate.swift */; };
-		922BAE2725311EC100C04D9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922BAE2625311EC100C04D9A /* ViewController.swift */; };
-		922BAE2A25311EC100C04D9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922BAE2825311EC100C04D9A /* Main.storyboard */; };
 		922BAE2C25311EC300C04D9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922BAE2B25311EC300C04D9A /* Assets.xcassets */; };
 		922BAE2F25311EC300C04D9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922BAE2D25311EC300C04D9A /* LaunchScreen.storyboard */; };
+		922BAE3925311F7400C04D9A /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922BAE3825311F7400C04D9A /* AppTabBarController.swift */; };
+		922BAE3E25311FDD00C04D9A /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922BAE3D25311FDD00C04D9A /* EmptyViewController.swift */; };
+		922BAE4125311FE400C04D9A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922BAE4025311FE400C04D9A /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		922BAE1F25311EC100C04D9A /* MapMemoryManagementExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapMemoryManagementExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		922BAE1F25311EC100C04D9A /* MapMemoryManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapMemoryManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		922BAE2225311EC100C04D9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		922BAE2425311EC100C04D9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		922BAE2625311EC100C04D9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		922BAE2925311EC100C04D9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		922BAE2B25311EC300C04D9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		922BAE2E25311EC300C04D9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		922BAE3025311EC300C04D9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		922BAE3825311F7400C04D9A /* AppTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarController.swift; sourceTree = "<group>"; };
+		922BAE3D25311FDD00C04D9A /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
+		922BAE4025311FE400C04D9A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +42,7 @@
 		922BAE1625311EC100C04D9A = {
 			isa = PBXGroup;
 			children = (
-				922BAE2125311EC100C04D9A /* MapMemoryManagementExampleProject */,
+				922BAE2125311EC100C04D9A /* MapMemoryManagement */,
 				922BAE2025311EC100C04D9A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,31 +50,32 @@
 		922BAE2025311EC100C04D9A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				922BAE1F25311EC100C04D9A /* MapMemoryManagementExampleProject.app */,
+				922BAE1F25311EC100C04D9A /* MapMemoryManagement.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		922BAE2125311EC100C04D9A /* MapMemoryManagementExampleProject */ = {
+		922BAE2125311EC100C04D9A /* MapMemoryManagement */ = {
 			isa = PBXGroup;
 			children = (
 				922BAE2225311EC100C04D9A /* AppDelegate.swift */,
 				922BAE2425311EC100C04D9A /* SceneDelegate.swift */,
-				922BAE2625311EC100C04D9A /* ViewController.swift */,
-				922BAE2825311EC100C04D9A /* Main.storyboard */,
+				922BAE3825311F7400C04D9A /* AppTabBarController.swift */,
+				922BAE3D25311FDD00C04D9A /* EmptyViewController.swift */,
+				922BAE4025311FE400C04D9A /* MapViewController.swift */,
 				922BAE2B25311EC300C04D9A /* Assets.xcassets */,
 				922BAE2D25311EC300C04D9A /* LaunchScreen.storyboard */,
 				922BAE3025311EC300C04D9A /* Info.plist */,
 			);
-			path = MapMemoryManagementExampleProject;
+			path = MapMemoryManagement;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		922BAE1E25311EC100C04D9A /* MapMemoryManagementExampleProject */ = {
+		922BAE1E25311EC100C04D9A /* MapMemoryManagement */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 922BAE3325311EC300C04D9A /* Build configuration list for PBXNativeTarget "MapMemoryManagementExampleProject" */;
+			buildConfigurationList = 922BAE3325311EC300C04D9A /* Build configuration list for PBXNativeTarget "MapMemoryManagement" */;
 			buildPhases = (
 				922BAE1B25311EC100C04D9A /* Sources */,
 				922BAE1C25311EC100C04D9A /* Frameworks */,
@@ -82,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = MapMemoryManagementExampleProject;
+			name = MapMemoryManagement;
 			productName = MapMemoryManagementExampleProject;
-			productReference = 922BAE1F25311EC100C04D9A /* MapMemoryManagementExampleProject.app */;
+			productReference = 922BAE1F25311EC100C04D9A /* MapMemoryManagement.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -101,7 +104,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 922BAE1A25311EC100C04D9A /* Build configuration list for PBXProject "MapMemoryManagementExampleProject" */;
+			buildConfigurationList = 922BAE1A25311EC100C04D9A /* Build configuration list for PBXProject "MapMemoryManagement" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,7 +117,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				922BAE1E25311EC100C04D9A /* MapMemoryManagementExampleProject */,
+				922BAE1E25311EC100C04D9A /* MapMemoryManagement */,
 			);
 		};
 /* End PBXProject section */
@@ -126,7 +129,6 @@
 			files = (
 				922BAE2F25311EC300C04D9A /* LaunchScreen.storyboard in Resources */,
 				922BAE2C25311EC300C04D9A /* Assets.xcassets in Resources */,
-				922BAE2A25311EC100C04D9A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +139,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				922BAE2725311EC100C04D9A /* ViewController.swift in Sources */,
+				922BAE3925311F7400C04D9A /* AppTabBarController.swift in Sources */,
 				922BAE2325311EC100C04D9A /* AppDelegate.swift in Sources */,
+				922BAE3E25311FDD00C04D9A /* EmptyViewController.swift in Sources */,
+				922BAE4125311FE400C04D9A /* MapViewController.swift in Sources */,
 				922BAE2525311EC100C04D9A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,14 +150,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		922BAE2825311EC100C04D9A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				922BAE2925311EC100C04D9A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		922BAE2D25311EC300C04D9A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,12 +284,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RA2366999U;
-				INFOPLIST_FILE = MapMemoryManagementExampleProject/Info.plist;
+				INFOPLIST_FILE = MapMemoryManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.harbourcitysoftware.MapMemoryManagementExampleProject;
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.harbourcitysoftware.MapMemoryManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,12 +303,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RA2366999U;
-				INFOPLIST_FILE = MapMemoryManagementExampleProject/Info.plist;
+				INFOPLIST_FILE = MapMemoryManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.harbourcitysoftware.MapMemoryManagementExampleProject;
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.harbourcitysoftware.MapMemoryManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -322,7 +318,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		922BAE1A25311EC100C04D9A /* Build configuration list for PBXProject "MapMemoryManagementExampleProject" */ = {
+		922BAE1A25311EC100C04D9A /* Build configuration list for PBXProject "MapMemoryManagement" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				922BAE3125311EC300C04D9A /* Debug */,
@@ -331,7 +327,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		922BAE3325311EC300C04D9A /* Build configuration list for PBXNativeTarget "MapMemoryManagementExampleProject" */ = {
+		922BAE3325311EC300C04D9A /* Build configuration list for PBXNativeTarget "MapMemoryManagement" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				922BAE3425311EC300C04D9A /* Debug */,
