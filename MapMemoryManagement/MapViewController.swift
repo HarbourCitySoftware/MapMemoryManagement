@@ -14,6 +14,9 @@ final class MapViewController: UIViewController {
 
     private var mapView: MKMapView?
 
+    /// Position of the map to restore once adding map view back to heirarchy
+    private var mapCamera: MKMapCamera?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         addMap()
@@ -40,9 +43,18 @@ final class MapViewController: UIViewController {
         map.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         map.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         self.mapView = map
+
+        if let mapCamera = self.mapCamera {
+            self.mapView?.setCamera(mapCamera, animated: false)
+            self.mapCamera = nil
+        }
     }
 
     private func removeMap() {
+        if let map = mapView,
+           map.camera.centerCoordinate.latitude != 0 && map.camera.centerCoordinate.longitude != 0 {
+            mapCamera = mapView?.camera
+        }
         mapView?.removeFromSuperview()
         mapView = nil
     }
