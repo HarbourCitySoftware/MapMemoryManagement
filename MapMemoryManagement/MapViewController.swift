@@ -12,14 +12,7 @@ import UIKit
 final class MapViewController: UIViewController {
     private var cancellable: Set<AnyCancellable> = .init()
 
-    private let mapView: MKMapView = {
-        let map = MKMapView()
-        let centreCoordinate = CLLocationCoordinate2D(latitude: -33.8688, longitude: 151.2093) // Centre of Sydney CBD
-        let span = MKCoordinateSpan(latitudeDelta: 0.35, longitudeDelta: 0.35)
-        let region = MKCoordinateRegion(center: centreCoordinate, span: span)
-        map.setRegion(region, animated: true)
-        return map
-    }()
+    private var mapView: MKMapView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,20 +27,32 @@ final class MapViewController: UIViewController {
             .publisher(for: UIApplication.didBecomeActiveNotification)
             .sink { [weak self] _ in self?.addMap() }
             .store(in: &cancellable)
-
     }
 
     private func addMap() {
         removeMap() // Ensure map isn't already in view hierarchy before trying to add
-        view.addSubview(mapView)
-        mapView.translatesAutoresizingMaskIntoConstraints = false
-        mapView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        mapView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        mapView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        mapView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        mapView = generateMapView()
+        guard let map = mapView else { return }
+        view.addSubview(map)
+        map.translatesAutoresizingMaskIntoConstraints = false
+        map.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        map.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        map.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        map.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        self.mapView = map
     }
 
     private func removeMap() {
-        mapView.removeFromSuperview()
+        mapView?.removeFromSuperview()
+        mapView = nil
+    }
+
+    private func generateMapView() -> MKMapView {
+        let map = MKMapView()
+        let centreCoordinate = CLLocationCoordinate2D(latitude: -33.8688, longitude: 151.2093) // Centre of Sydney CBD
+        let span = MKCoordinateSpan(latitudeDelta: 0.35, longitudeDelta: 0.35)
+        let region = MKCoordinateRegion(center: centreCoordinate, span: span)
+        map.setRegion(region, animated: true)
+        return map
     }
 }
