@@ -17,6 +17,10 @@ final class MapViewController: UIViewController {
     /// Position of the map to restore once adding map view back to heirarchy
     private var mapCamera: MKMapCamera?
 
+    /// When map view is removed from view heirarchy, replace with snapshot view which is
+    /// essentialy showing the map in its last known state
+    private var snapshotView: UIView?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         addMap()
@@ -48,9 +52,21 @@ final class MapViewController: UIViewController {
             self.mapView?.setCamera(mapCamera, animated: false)
             self.mapCamera = nil
         }
+
+        snapshotView?.removeFromSuperview()
+        snapshotView = nil
     }
 
     private func removeMap() {
+        if let snapshot = mapView?.snapshotView(afterScreenUpdates: true) {
+            view.addSubview(snapshot)
+            snapshot.translatesAutoresizingMaskIntoConstraints = false
+            snapshot.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+            snapshot.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+            snapshot.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+            snapshot.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+            self.snapshotView = snapshot
+        }
         if let map = mapView,
            map.camera.centerCoordinate.latitude != 0 && map.camera.centerCoordinate.longitude != 0 {
             mapCamera = mapView?.camera
